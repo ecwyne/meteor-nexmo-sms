@@ -7,7 +7,8 @@ meteor add ecwyne:nexmo-sms
 
 ##Use
 ```javascript
-var nexmo = Nexmo.initialize('api_key', 'api_secret', 'http OR https', 'DEBUG (boolean)');
+Nexmo.initialize('api_key', 'api_secret', 'http OR https', 'DEBUG (boolean)');
+Nexmo.sendTextMessage('...')
 ```
 Setting DEBUG to true will automatically log responses to api calls.
 
@@ -17,67 +18,67 @@ List of API's supported by the library.
 
 ###Send a text message
 
-	nexmo.sendTextMessage(sender,recipient,message,opts,callback)
+	Nexmo.sendTextMessage(sender,recipient,message,opts,callback)
 
 ###Send a Binary Message
 
-	nexmo.sendBinaryMessage(fromnumber, tonumber,body, udh, callback);
+	Nexmo.sendBinaryMessage(fromnumber, tonumber,body, udh, callback);
 
 body - Hex encoded binary data
 udh - Hex encoded udh
 
 ###Send a WAP Push Message
 
-	nexmo.sendWapPushMessage(fromnumber,tonumber,title,url,validity,callback);
+	Nexmo.sendWapPushMessage(fromnumber,tonumber,title,url,validity,callback);
 
 validity is optional if given should be in milliseconds.
 
 ###Check Account Balance 
-	nexmo.checkBalance(callback);
+	Nexmo.checkBalance(callback);
 
 ###Get Pricing for sending message to a country.
 
-	nexmo.getPricing(countryCode,callback);
+	Nexmo.getPricing(countryCode,callback);
 
 countryCode - 2 letter ISO Country Code
 
 ###Get all numbers associated to the account.
 
-	nexmo.getNumbers(callback);
+	Nexmo.getNumbers(callback);
 
 ###Search for MSISDN's available to purchase.
 
-	nexmo.searchNumbers(countryCode,pattern,callback);
+	Nexmo.searchNumbers(countryCode,pattern,callback);
 
 pattern is optional, pass numbers to match in the search
 
 ###Change Password (API Secret)
 
-	nexmo.changePassword(<NEW_PASSWORD>,callback);
+	Nexmo.changePassword(<NEW_PASSWORD>,callback);
 
 ###Change Callback URL associated to the account
 
-	nexmo.changeMoCallbackUrl(<NEW_CALLBACK_URL>,callback);
+	Nexmo.changeMoCallbackUrl(<NEW_CALLBACK_URL>,callback);
 
 ###Change Delivery Receipt URL associated to the account
 
-	nexmo.changeDrCallbackUrl(<NEW_DR_CALLBACK_URL>,callback);
+	Nexmo.changeDrCallbackUrl(<NEW_DR_CALLBACK_URL>,callback);
 
 ###Send TTS Message
 	
-	nexmo.sendTTSMessage = function(<TO_NUMBER>,message,options,callback);
+	Nexmo.sendTTSMessage = function(<TO_NUMBER>,message,options,callback);
 
 ###Send TTS Prompt With Capture	
 
-	nexmo.sendTTSPromptWithCapture(<TO_NUMBER>,message,<MAX_DIGITS>, <BYE_TEXT>,options,callback);
+	Nexmo.sendTTSPromptWithCapture(<TO_NUMBER>,message,<MAX_DIGITS>, <BYE_TEXT>,options,callback);
 
 ###Send TTS Prompt With Confirm
 
-	nexmo.sendTTSPromptWithConfirm(<TO_NUMBER>, message ,<MAX_DIGITS>,'<PIN_CODE>',<BYE_TEXT>,<FAILED_TEXT>,options,callback);
+	Nexmo.sendTTSPromptWithConfirm(<TO_NUMBER>, message ,<MAX_DIGITS>,'<PIN_CODE>',<BYE_TEXT>,<FAILED_TEXT>,options,callback);
 
 ###Make a voice call
 
-	nexmo.call(<TO_NUMBER>,<ANSWER_URL>,options,callback);
+	Nexmo.call(<TO_NUMBER>,<ANSWER_URL>,options,callback);
 
 
 Callback
