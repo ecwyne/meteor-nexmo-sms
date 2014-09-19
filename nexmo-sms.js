@@ -1,0 +1,1 @@
+Nexmo = Npm.require('easynexmo');
