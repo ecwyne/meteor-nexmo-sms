@@ -1,6 +1,6 @@
 Package.describe({
   summary: "Nexmo REST api packaged for Meteor",
-  version: "1.0.0",
+  version: "1.0.1",
   git: "http://github.com/ecwyne/meteor-nexmo-sms",
   name: 'ecwyne:nexmo-sms'
 });

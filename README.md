@@ -98,6 +98,20 @@ An example callback function :
 
 Refer here http://nexmo.com/documentation/ to get the schema for the returned message response object.
 
+Logger
+======
+By default you're given a logger callback of `Nexmo.logger` which is set to the following function.
+
+```javascript
+Nesmo.logger = function(err, msg){
+	if (err){
+		console.error(err);
+	} else {
+		console.log(msg);
+	}
+}
+```
+
 The MIT License (MIT)
 =====================
 
