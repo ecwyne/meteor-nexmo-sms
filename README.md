@@ -103,7 +103,7 @@ Logger
 By default you're given a logger callback of `Nexmo.logger` which is set to the following function.
 
 ```javascript
-Nesmo.logger = function(err, msg){
+Nexmo.logger = function(err, msg){
 	if (err){
 		console.error(err);
 	} else {
