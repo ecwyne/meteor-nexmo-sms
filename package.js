@@ -1,12 +1,12 @@
 Package.describe({
   summary: "Nexmo REST api packaged for Meteor",
-  version: "1.0.1",
+  version: "1.0.2",
   git: "http://github.com/ecwyne/meteor-nexmo-sms",
   name: 'ecwyne:nexmo-sms'
 });
 
 Npm.depends({
-	easynexmo: '0.4.1'
+	easynexmo: '0.4.2'
 });
 
 Package.onUse(function(api) {
